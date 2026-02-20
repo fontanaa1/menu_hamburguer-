@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Haruy Sushi - Menu Hambúrguer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- HEADER COM MENU RESPONSIVO -->
+    <header class="header flex justify-between items-center px-6 py-4 max-w-6xl mx-auto bg-white shadow-md">
+        <img src="./assets/images/logo.png" alt="logo Haruy sushi" class="h-10" />
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex space-x-8 font-bold">
+            <a href="#cardapio" class="hover:text-red-600 transition">CARDÁPIO</a>
+        </nav>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button id="btn-mobile" class="md:hidden focus:outline-none" aria-label="Abrir menu">
+            <!-- Ícone Hambúrguer -->
+            <svg id="icon-hamburger" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+
+            <!-- Ícone X -->
+            <svg id="icon-close" class="hidden w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Menu Mobile -->
+    <nav id="menu-mobile" class="hidden md:hidden bg-white shadow-md px-6 py-4 max-w-6xl mx-auto">
+        <ul class="space-y-4 font-bold">
+            <li><a href="#cardapio" class="block hover:text-red-600 transition">CARDÁPIO</a></li>
+        </ul>
+    </nav>
+
+    <!-- SEÇÃO BANNER -->
+    <section class="banner max-w-6xl mx-auto mt-16 flex flex-col md:flex-row items-center px-6">
+        <div class="coluna md:w-1/2 mb-8 md:mb-0">
+            <p class="text-3xl md:text-4xl text-left md:text-left">O verdadeiro sabor de cozinha japonesa</p>
+            <p class="mt-6 text-left">
+                <a class="botao border border-gray-800 rounded-3xl px-6 py-3 text-lg inline-block hover:bg-red-600 hover:text-white transition"
+                    href="#cardapio">VEJA O CARDÁPIO</a>
+            </p>
+        </div>
+        <div class="coluna md:w-1/2">
+            <img src="./assets/images/banner.png" alt="prato" class="w-full" />
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio"    class="cardapio max-w-4xl mx-auto mt-20 px-6 text-center">
+        <h1 class="text-4xl font-bold mb-8">Cardápio</h1>
+
+        <div class="cardapio-categoria text-left text-red-600 text-xl mb-4 font-semibold">
+            Sushi & Sashimi
+        </div>
+
+        <div class="space-y-6 text-left">
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Combinado Sushi</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 25,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">10 Sashimis variados, 10 Urimakis filadélfia e 10 uramakis</div>
+            </div>
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Combinado Sushi</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 115,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">10 Sashimis Variados, 10 uramakis Filadélfia e 10 Uramakis</div>
+            </div>
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Combinado Hot</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 99,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">1 temaki Filadélfia Médio, 10 uramakis Filadélfia e 10 hot Filadélfia</div>
+            </div>
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Combinado Yakissoba</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 89,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">1 temaki Filadélfia Médio, 10 uramakis Filadélfia e 10 hot Filadélfia</div>
+            </div>
+        </div>
+
+        <div class="cardapio-categoria text-left text-red-600 text-xl mt-12 mb-4 font-semibold">
+            Bebidas
+        </div>
+
+        <div class="space-y-6 text-left">
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Coca-Cola Lata</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 5,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">Lata de Coca-Cola 300ml trincando de gelada</div>
+            </div>
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Guaraná Lata</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 5,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">Guaraná 300ml trincando de gelada</div>
+            </div>
+            <div class="cardapio-item">
+                <div class="cardapio-nome font-bold text-lg">Água sem gás</div>
+                <div class="cardapio-preco text-red-600 text-sm">R$ 4,00</div>
+                <div class="cardapio-descricao text-gray-600 text-sm">Água sem gás 300ml</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center p-8 mt-20">
+        <h3 class="text-xl mb-2 font-semibold">Haruy Sushi</h3>
+        <p>Rua Prof. Toledo, 500, centro - Sorocaba</p>
+        <p>Whatsapp: (15) 98765-4321</p>
+        <p>Aberto todos os dias das 14h às 23h</p>
+    </footer>
+
+    <!-- Link Whatsapp flutuante -->
+    <a href="https://wa.me/5515987654321" target="_blank" class="fixed right-5 bottom-5">
+        <img src="./assets/images/whatsapp.png" alt="link-whatsapp" class="h-16" />
+    </a>
+
+    <!-- SCRIPT MENU HAMBURGUER -->
+    <script>
+        const btn = document.getElementById('btn-mobile');
+        const menu = document.getElementById('menu-mobile');
+        const iconHamburger = document.getElementById('icon-hamburger');
+        const iconClose = document.getElementById('icon-close');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            iconHamburger.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
